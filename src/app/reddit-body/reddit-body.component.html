@@ -4,13 +4,13 @@
       <h3>Add a link</h3>
       <label>Title</label>
       <br>
-      <input name="title">
+      <input class="input-style" name="title" #newtitle>
       <br>
       <label>Link</label>
       <br>
-      <input name="link">
+      <input class="input-style" name="link" #newlink>
       <br><br>
-      <button>Add me!</button>
+      <button class="button-style" (click)=addArticle(newtitle,newlink)>Add me!</button>
     </form>
   </div>
   <div class="flex-child2">
