@@ -1,16 +1,5 @@
 @import "../../theme/_variables";
-
-@mixin childproper {
-  box-sizing      : border-box;
-  width           : $child-width;
-  padding-left    : 30px;
-  padding-right   : 50px;
-  //border          : 2px solid $reddit-grey;
-  background-color: $reddit-lightblue;
-  border-radius   : 3px;
-  margin-bottom   : 10px;
-}
-
+@import "../../theme/_mixins";
 .flex-container{
   margin          : auto;
   padding-top     : 10px;
@@ -20,14 +9,10 @@
   flex-direction  : column;
   align-items     : center;
   justify-content : space-between;
-  // border          : 1px solid $reddit-black;
   border-radius   : 3px;
   background-color: $reddit-slategray;
 
   .flex-child {
-    @include childproper;
-  }
-  .flex-child2{
-    @include childproper;
+    @include childproper(true);
   }
 }

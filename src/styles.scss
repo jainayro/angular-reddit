@@ -1,3 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+* {  box-sizing: border-box; }
+
 @import 'theme/_variables.scss';
 @import 'theme/_classes.scss';
+@import 'theme/_mixins.scss';
+@import 'assets/font-awesome-4.7.0/scss/font-awesome.scss';

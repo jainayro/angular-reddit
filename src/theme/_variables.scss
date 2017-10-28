@@ -5,8 +5,12 @@ $reddit-grey      : #BDBDBD;
 $reddit-slategray : #2F4F4F;
 $reddit-blue      : #1A5276;
 $reddit-lightblue : #819FF7;
+$reddit-red       : #C70039;
+$reddit-green     : #58D68D;
 $background       : red;
 
 //sizes
-$container-width : 500px;
-$child-width     : $container-width * 0.7;
+$container-width    : 500px;
+$child-width        : $container-width * 0.7;
+$inner-child-width  : $child-width * 0.3;
+$inner-child-width2 : $child-width * 0.69;

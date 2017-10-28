@@ -1,11 +1,65 @@
+@import "../../../theme/_variables";
+@import "../../../theme/_mixins";
+
+@mixin childproper2($width){
+  width : $width;
+  height: 100px;
+
+}
+
+@mixin voteButtonsproper($color){
+  border: 1px solid black;
+  border-radius: 3px;
+  // background-color: $color;
+  background-color: $reddit-lightblue;
+  &:hover {
+    background-color: $color;
+  }
+
+}
+
+
 .flex-container{
   display       : flex;
   flex-direction: row;
   flex-wrap     : wrap;
-  border        : 1px solid blue;
+  justify-content: space-between;
+  @include childproper(false);
   .flex-child{
-    width : 100px;
-    height: 100px;
-    border: 1px solid green;
+    @include childproper2($inner-child-width);
+    border-right: 2px solid black;
+    .reddit-points-number{
+      font-size: 60px;
+      text-align: center;
+      margin: 0;
+
+
+
+    }
+    .reddit-points-text{
+      text-align: center;
+      margin: 0;
+
+    }
    }
+  .flex-child2{
+    @include childproper2($inner-child-width2);
+    padding: 3px;
+    .reddit-title{
+      margin: 0;
+
+    }
+    .reddit-description{
+      margin: 0;
+      margin-bottom: 30px;
+
+    }
+    .reddit-vote-up{
+      @include voteButtonsproper($reddit-green);
+
+    }
+    .reddit-vote-down{
+      @include voteButtonsproper($reddit-red);
+    }
+  }
  }
